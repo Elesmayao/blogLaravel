@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7db8c9d023a72ad76040d70665f87baa",
+    "content-hash": "e4e94904f726a846439f880b73c3b054",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -669,6 +669,54 @@
             "description": "Highlight PHP code in terminal",
             "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "jenssegers/date",
+            "version": "v2.0.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jenssegers/date.git",
+                "reference": "422c6682fe68de59398ef89cca45d920afe12436"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jenssegers/date/zipball/422c6682fe68de59398ef89cca45d920afe12436",
+                "reference": "422c6682fe68de59398ef89cca45d920afe12436",
+                "shasum": ""
+            },
+            "require": {
+                "nesbot/carbon": "*",
+                "php": ">=5.3.0",
+                "symfony/translation": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*",
+                "satooshi/php-coveralls": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Jenssegers\\Date": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "http://jenssegers.be"
+                }
+            ],
+            "description": "A date library to help you work with dates",
+            "keywords": [
+                "date",
+                "datetime",
+                "laravel",
+                "time"
+            ],
+            "time": "2015-03-14T13:21:54+00:00"
         },
         {
             "name": "kylekatarnls/update-helper",

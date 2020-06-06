@@ -23,7 +23,7 @@
 	                            <p class="mbr-section-text lead">{{ $articulo->contenido }}</p>
 	                            <div class="news__date">
 	                                <span class="cm-icon cm-icon-clock"></span>
-	                                <p>{{ $articulo->created_at->toDayDateTimeString() }}</p>
+	                                <p>{{ $articulo->created_at->diffForHumans() }}</p>
 	                            </div>
 	                            
 	                        </div>  

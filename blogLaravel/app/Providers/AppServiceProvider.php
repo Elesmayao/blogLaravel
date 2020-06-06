@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\View;
+use App\Theme;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,5 +27,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(190);
+
+        View::composer(['*'], function($view)
+        {
+            $temasTodos=Theme::all();
+            $view->with(compact('temasTodos'));
+        });
     }
 }

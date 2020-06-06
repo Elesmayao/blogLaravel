@@ -12,7 +12,7 @@
 */
 
 Route::get('/','WelcomeController@welcome')->name('welcome'); //index
-Route::get('/tema/{theme_id}','ThemeController@show'); //articulos de cada tema
+Route::get('/tema/{tema}','ThemeController@show')->name('tema.show'); //articulos de cada tema
 
 Auth::routes();
 

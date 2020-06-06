@@ -18,6 +18,7 @@ class CreateThemesTable extends Migration
             $table->integer('user_id')->unsigned()->default(1);
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('nombre');
+            $table->string('slug')->index()->unique();
             $table->boolean('destacado')->default(false);
             $table->timestamps();
         });

@@ -74,7 +74,8 @@
                             <div class="dropdown-menu">
                                 @foreach($temasTodos as $tema)
 
-                                    <a class="dropdown-item" href="{{ url('/tema/'.$tema->id) }}">{{ $tema->nombre }}</a>
+                                    {{-- < class="dropdown-item" href="{{ url('/tema/'.$tema) }}">{{ $tema->nombre }}</a>--}}
+                                    <a class="dropdown-item" href="{{ route('tema.show',$tema) }}">{{ $tema->nombre }}</a>
                                     
 
                                 @endforeach
