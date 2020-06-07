@@ -60,6 +60,18 @@
                     </div>
 
                 </div>
+                
+                {{-- BUSCADOR --}}
+                <div style="margin-top:17px">
+                    <form class="form-inline" action="{{ url('/buscador') }}" method="GET">
+                        {{-- Le pasamos el token --}}
+                        @csrf
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputEmail2" name="busqueda" placeholder="Buscar...">
+                        </div>
+                        <button style="margin-top:7px" type="submit" class="btn btn-warning btn-sm">Buscar</button>
+                    </form>
+                </div>
                 <div class="mbr-table-cell">
 
                     <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">

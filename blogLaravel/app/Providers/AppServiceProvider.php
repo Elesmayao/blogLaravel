@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(190);
 
-        View::composer(['*'], function($view)
+        View::composer(['layouts.app'], function($view)
         {
             $temasTodos=Theme::all();
             $view->with(compact('temasTodos'));

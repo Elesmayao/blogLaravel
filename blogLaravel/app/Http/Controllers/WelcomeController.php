@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-use App\Theme;
+/*use App\Theme;*/
 
 class WelcomeController extends Controller
 {
@@ -12,8 +12,8 @@ class WelcomeController extends Controller
 
     	/*$temasTodos = DB::select('select * from themes');*/
     	/*$temasTodos = DB::table('themes')->get();*/
-    	$temasTodos = Theme::all();
+    	/*$temasTodos = Theme::all();*/
 
-    	return view('welcome')->with(compact('temasTodos'));
+    	return view('welcome');
     }
 }

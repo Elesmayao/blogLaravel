@@ -1,15 +1,12 @@
 @extends('layouts.app')
 
-@section('title') {{ $tema->nombre }} @endsection
+@section('title','Buscador')
 @section('content')
 
 <section class="mbr-section mbr-section-hero news" id="news1-7" data-rv-view="14" style="background-color: rgb(255, 255, 255); padding-top: 180px; padding-bottom: 120px;">
     
 
     <div class="container-fluid">
-    	<div class="row">
-    		<div class="col-xs-12 col-lg-10 col-lg-offset-6">{{ $tema->nombre }}</div>
-    	</div>     
         <div class="row">
             <div class="col-xs-12 col-lg-10 col-lg-offset-1">
             	@foreach($articulos as $articulo)
@@ -32,13 +29,6 @@
             	@endforeach
             </div>
         </div>
-		{{-- Paginador --}}
-		<div class="row">
-			<div class="col-xs-12 col-lg-10 col-lg-offset-1">
-				{{ $articulos->links() }}
-			</div>
-		</div>
-
     </div>
 	
 	@foreach($articulos as $articulo)

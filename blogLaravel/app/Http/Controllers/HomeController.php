@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Theme;
+/*use App\Theme;*/
 
 class HomeController extends Controller
 {
@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $temasTodos = Theme::all();
-        return view('home')->with(compact('temasTodos'));
+        /*$temasTodos = Theme::all();*/
+        return view('home');
     }
 }
