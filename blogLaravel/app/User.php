@@ -48,4 +48,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(Article::class);
     }
+
+    /*Accesors*/
+    /*public function getNameAttribute($valor)
+    {
+        /*Cambiamos la primera palabra del valor pasado a mayus
+        return ucfirst(strtolower($valor));
+    }
+    */
+
+    /*Mutators*/
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name']=ucfirst(strtolower($value));
+    }
+
 }

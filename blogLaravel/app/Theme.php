@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Theme extends Model
 {
+
     /*le pasamos a la ruta el valor slug*/
     public function getRouteKeyName()
     {
@@ -21,5 +22,21 @@ class Theme extends Model
     public function articles()
     {
     	return $this->hasMany(Article::class);
+    }
+
+    /*Accesor para el campo destacados ( Para que en vez de salir en este apartado numero salga Si o No )*/
+    public function getDestacadoAttribute($valor)
+    {
+        if($valor)
+            return 'Si';
+        return 'No';
+    }
+
+    /*Accesor para el campo suscripcion ( Para que en vez de salir en este apartado numero salga Si o No )*/
+    public function getSuscripcionAttribute($valor)
+    {
+        if($valor)
+            return 'Si';
+        return 'No';
     }
 }

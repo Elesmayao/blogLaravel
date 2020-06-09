@@ -19,9 +19,9 @@ class CreateArticlesTable extends Migration
             $table->text('contenido')->nullable();
             $table->boolean('activo')->default(true);
             $table->integer('theme_id')->unsigned();
-            $table->foreign('theme_id')->references('id')->on('themes');
+            $table->foreign('theme_id')->references('id')->on('themes')->onDelete('cascade');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

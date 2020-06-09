@@ -80,7 +80,8 @@
 
                     <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
                         <li class="nav-item">
-                            <a class="nav-link link" href="{{ route('welcome') }}">INICIO</a></li>
+                            <a class="nav-link link" href="{{ route('welcome') }}">INICIO</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="https://mobirise.com/" aria-expanded="false">TEMAS PRINCIPALES</a>
                             <div class="dropdown-menu">
@@ -118,6 +119,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ url('/home') }}">Perfil</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

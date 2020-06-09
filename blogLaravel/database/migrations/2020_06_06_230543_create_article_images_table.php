@@ -17,7 +17,7 @@ class CreateArticleImagesTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->integer('article_id')->unsigned();
-            $table->foreign('article_id')->references('id')->on('articles');
+            $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
             $table->timestamps();
         });
     }
