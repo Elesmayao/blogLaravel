@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-/*use App\Theme;*/
+use App\Theme;
 
 class WelcomeController extends Controller
 {
@@ -14,6 +14,8 @@ class WelcomeController extends Controller
     	/*$temasTodos = DB::table('themes')->get();*/
     	/*$temasTodos = Theme::all();*/
 
-    	return view('welcome');
+    	/*Creamos una colección para meter los temas que sean destacados*/
+    	$temasDestacados=Theme::where('destacado',1)->with(['articles.images'])->orderBy('id','desc')->get();
+    	return view('welcome')->with(compact('temasDestacados'));
     }
 }

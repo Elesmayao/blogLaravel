@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('alias')->unique(); //añadido mio
+            $table->boolean('bloqueado')->default(false);
             $table->string('web')->nullable(); //añadido mio
             $table->string('password');
             $table->rememberToken();

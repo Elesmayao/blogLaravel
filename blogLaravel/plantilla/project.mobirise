@@ -1,0 +1,458 @@
+{
+  "settings": {
+    "name": "blog-laravel",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "colorm",
+      "title": "ColorM",
+      "styling": {
+        "primaryColor": "#e67e22",
+        "buttonsColor": "#000000",
+        "secondaryColor": "#9b59b6",
+        "successColor": "#2ecc71",
+        "infoColor": "#3498db",
+        "warningColor": "#f1c40f",
+        "dangerColor": "#e74c3c",
+        "titleFont": "Roboto",
+        "subtitleFont": "Roboto",
+        "textFont": "Open Sans",
+        "isRoundedButtons": false,
+        "isAnimatedOnScroll": true,
+        "isScrollToTopButton": true
+      },
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "4.8.1",
+    "siteFonts": [],
+    "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n",
+    "robotsSwitcher": "on",
+    "siteUrl": "",
+    "sitemapSwitcherAuto": "on",
+    "favicon": "",
+    "noImageResize": "",
+    "cookiesAlert": "Utilizamos cookies de terceros.",
+    "gdpr": "",
+    "uniqCompNum": 8,
+    "versionPublish": "4.8.1",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "_styles": {
+            ".hide-buttons .nav-btn": {
+              "display": "none !important"
+            },
+            ".navbar-caption": {
+              "color": "#ffffff"
+            },
+            ".navbar-toggler": {
+              "color": "#ffffff"
+            },
+            ".close-icon::before, .close-icon::after": {
+              "background-color": "#ffffff"
+            },
+            ".link, .dropdown-item": {
+              "color": "#ffffff",
+              "googleLink": "https://fonts.googleapis.com/css?family=Roboto:400,300,700",
+              "font-family": "'Roboto', sans-serif"
+            },
+            ".link": {
+              "font-size": "1.05rem"
+            },
+            ".dropdown-item, .nav-dropdown-sm .link": {
+              "font-size": "1.137rem"
+            },
+            ".link:hover, .link:focus": {
+              "color": "@primaryColor"
+            },
+            ".dropdown-item:hover::before, .dropdown-item:focus::before": {
+              "background": "@primaryColor"
+            },
+            ".dropdown-item:hover, .dropdown-item:focus": {
+              "color": "#ffffff"
+            },
+            ".link[aria-expanded=\"true\"], .dropdown-menu": {
+              "background": "#962d22"
+            },
+            ".nav-dropdown-sm .link:focus, .nav-dropdown-sm .link:hover, .nav-dropdown-sm .dropdown-item:focus, .nav-dropdown-sm .dropdown-item:hover": {
+              "background": "#b33528!important"
+            },
+            ".navbar, .nav-dropdown-sm, .nav-dropdown-sm .link[aria-expanded=\"true\"], .nav-dropdown-sm .dropdown-menu": {
+              "background": "#c0392b"
+            },
+            ".bg-color.transparent .link": {
+              "color": "#ffffff",
+              "transition": "none"
+            },
+            ".bg-color.transparent.opened .link": {
+              "transition": "color .2s ease-in-out"
+            },
+            ".bg-color.transparent.opened .link:hover, .bg-color.transparent.opened .link:focus": {
+              "color": "@primaryColor"
+            },
+            ".link[aria-expanded=\"true\"], .dropdown-item[aria-expanded=\"true\"]": {
+              "color": "#e67e22!important"
+            }
+          },
+          "_params": {
+            "logo": true,
+            "showBrand": true,
+            "hideButtons": true,
+            "sticky": true,
+            "collapsed": true,
+            "transparent": false,
+            "bgColor": "#c0392b",
+            "fontSize": "1.05",
+            "fontName": {
+              "name": "Roboto",
+              "url": "https://fonts.googleapis.com/css?family=Roboto:400,300,700",
+              "css": "'Roboto', sans-serif"
+            },
+            "fontColor": "#ffffff",
+            "fontHoverColor": "@primaryColor"
+          },
+          "items": "<li class=\"nav-item\"><a data-app-btn=\"true\" class=\"nav-link link\" href=\"https://mobirise.com/\">INICIO</a></li><li class=\"nav-item dropdown\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\" aria-expanded=\"false\">TEMAS PRINCIPALES</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Mobile friendly</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Based on Bootstrap</a><div class=\"dropdown\"><a data-app-btn=\"true\" class=\"dropdown-item dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\">Trendy blocks</a><div class=\"dropdown-menu dropdown-submenu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Image/content slider</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Contact forms</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Image gallery</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Mobile menu</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Google maps</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Social buttons</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Google fonts</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Video background</a></div></div><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Host anywhere</a></div></li><li class=\"nav-item nav-btn\"><a data-app-btn=\"true\" data-button=\"\" data-app-selector=\".btn\" class=\"nav-link btn btn-white btn-white-outline\" href=\"https://mobirise.com/\">DOWNLOAD</a></li>",
+          "logo": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/img-laravel-128x128.png",
+              "height": 128,
+              "alt": "Mobirise",
+              "link": "https://mobirise.com",
+              "title": ""
+            },
+            "iconFont": {
+              "class": "mbr-iconfont mbr-iconfont-menu",
+              "link": "https://mobirise.com",
+              "size": 0
+            }
+          },
+          "brand": "<a class=\"navbar-caption text-white\" data-app-btn=\"true\" data-app-selector=\".navbar-caption\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Brand Name\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,mbrColor\">BLOGLARAVEL</a>",
+          "alias": "colorm/components",
+          "_tags": [
+            "Tema"
+          ],
+          "_name": "menu",
+          "_anchor": "menu-0"
+        },
+        {
+          "_params": {
+            "autoplay": true,
+            "animType": "book",
+            "theme": "twist",
+            "slides": [
+              {
+                "image": "@PROJECT_PATH@/assets/images/slide3-1600x900.jpg",
+                "linkUrl": "http://google.com",
+                "link": false,
+                "src": "@ADDONS_PATH@/wowslider/assets/images/slide3.jpg",
+                "tooltip": "@PROJECT_PATH@/assets/images/tooltip3.jpg",
+                "title": "title 1",
+                "text": "text 1",
+                "active": false
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/slide2-1600x900.jpg",
+                "linkUrl": "http://google.com",
+                "link": false,
+                "src": "@ADDONS_PATH@/wowslider/assets/images/slide2.jpg",
+                "tooltip": "@PROJECT_PATH@/assets/images/tooltip2.jpg",
+                "title": "title 2",
+                "text": "text 2",
+                "active": false
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/slide1-1600x900.jpg",
+                "linkUrl": "http://google.com",
+                "link": false,
+                "src": "@ADDONS_PATH@/wowslider/assets/images/slide1.jpg",
+                "tooltip": "@PROJECT_PATH@/assets/images/tooltip1.jpg",
+                "title": "title 3",
+                "text": "text 3",
+                "active": true
+              }
+            ],
+            "fullScreen": true,
+            "showCaptions": false,
+            "hideControls": false,
+            "responsive": "2",
+            "paddingTop": 0,
+            "paddingBottom": "0",
+            "captionsEffect": "slide",
+            "showBullets": true,
+            "bgColor": "#ffffff",
+            "timeout": 2,
+            "duration": 2,
+            "customSize": false,
+            "customWidth": "1600",
+            "customHeight": "1080",
+            "size": "1024x576",
+            "width": "1024",
+            "height": "576"
+          },
+          "articleLayout": false,
+          "alias": "wowslider",
+          "_tags": [
+            "Extensión"
+          ],
+          "_name": "wowslider",
+          "_anchor": "wowslider-1"
+        },
+        {
+          "_styles": {},
+          "_params": {
+            "showImages": true,
+            "showTitle": true,
+            "showText": true,
+            "showDate": true,
+            "paddingTop": 2,
+            "paddingBottom": 2,
+            "bgImageRadio": false,
+            "bgImage": "@THEME_PATH@/components/_images/features/03.jpg",
+            "parallax": false,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "https://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": true,
+            "overlayColor": "#fff",
+            "overlayOpacity": 0.9,
+            "news": [
+              {
+                "image": "@PROJECT_PATH@/assets/images/01.jpeg",
+                "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sit molestias error, magni deleniti consectetur voluptas soluta, placeat quo voluptatem tempora ullam, velit in sunt suscipit recusandae natus quia porro eveniet? Quis vitae ad voluptas, ullam deserunt. Odit sapiente laborum, obcaecati facere iusto animi alias iste quis. Itaque molestiae quibusdam voluptatibus suscipit, quisquam sequi reiciendis minima nihil. Reiciendis sed, mollitia minima aliquam! Porro vitae error enim totam accusamus consequuntur laboriosam, esse quisquam nulla quibusdam! Libero consequuntur saepe, quo perspiciatis itaque beatae accusamus minus veniam aspernatur, neque, dignissimos repellat modi laborum commodi dolores officia voluptates! Molestias cumque adipisci ipsa, rerum non.",
+                "date": "10 june 2016"
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/02.jpeg",
+                "title": "Lorem ipsum dolor sit amet, Illo autem, cum voluptas?",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At id in ipsam accusantium totam ex est, repellat, reiciendis non et minus beatae velit animi eaque nemo nam enim, praesentium accusamus, saepe ut odit eligendi asperiores. Nemo quis expedita dignissimos officia, aliquam ex porro explicabo dicta, molestias, quisquam pariatur ea ratione neque distinctio magni iusto est, alias iste repellendus. Deleniti, quis laboriosam libero doloremque iste nostrum molestias alias dicta suscipit labore reiciendis eum quas facere placeat repellat voluptate quaerat accusamus corrupti. Amet, iusto, suscipit nemo perferendis blanditiis laudantium dolor voluptate eaque, sint, enim corporis eius necessitatibus accusantium magni dignissimos non neque.",
+                "date": "10 june 2016"
+              },
+              {
+                "image": "@PROJECT_PATH@/assets/images/03.jpeg",
+                "title": "Ad harum eos, quisquam assumenda molestiae neque veritatis",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae delectus, laborum consequatur assumenda placeat, porro aspernatur cumque vero fugit harum quis modi obcaecati vel itaque numquam tenetur voluptatum maxime culpa quam eum consectetur veniam. Itaque totam, doloribus at? Tenetur, temporibus mollitia cupiditate. Doloremque quasi fugit velit et similique, neque optio facilis perferendis vitae minima quidem veniam totam quaerat suscipit tenetur aperiam id molestiae nobis cupiditate a rem dolorum doloribus? Suscipit officia expedita, nostrum et tempora amet repellat. Est molestiae odit debitis eaque, accusantium tempora. Ipsam eligendi dolores, illum magni maiores. Temporibus accusantium velit earum et repellendus labore accusamus iusto id.",
+                "date": "10 june 2016"
+              }
+            ]
+          },
+          "alias": "colorm/components",
+          "_tags": [
+            "Tema"
+          ],
+          "_name": "news1",
+          "_anchor": "news1-7"
+        },
+        {
+          "_styles": {
+            ".mbr-section-title": {
+              "font-weight": "700",
+              "letter-spacing": ".5vw",
+              "text-transform": "uppercase"
+            },
+            ".mbr-section-subtitle": {
+              "text-transform": "uppercase",
+              "letter-spacing": "2px",
+              "color": "#fff"
+            }
+          },
+          "_params": {
+            "showTitle": true,
+            "showImages": true,
+            "showTitles": true,
+            "ShowTexts": true,
+            "paddingTop": 2,
+            "paddingBottom": 2,
+            "columns": 4,
+            "bgImageRadio": false,
+            "bgImage": "@THEME_PATH@/components/_images/features/03.jpg",
+            "parallax": false,
+            "bgColorRadio": true,
+            "bgColor": "#f9593a",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "https://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": true,
+            "overlayColor": "#f9593a",
+            "overlayOpacity": 0.9
+          },
+          "media1": {
+            "iconFont": {
+              "active": true,
+              "class": "mbr-iconfont mbr-iconfont-features16",
+              "name": "cloud",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fc7a60",
+              "family": "cm-icon"
+            }
+          },
+          "media2": {
+            "iconFont": {
+              "active": true,
+              "class": "mbr-iconfont mbr-iconfont-features16",
+              "name": "note",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fc7a60",
+              "family": "cm-icon"
+            }
+          },
+          "media3": {
+            "iconFont": {
+              "active": true,
+              "class": "mbr-iconfont mbr-iconfont-features16",
+              "name": "axe",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fc7a60",
+              "family": "cm-icon"
+            }
+          },
+          "media4": {
+            "iconFont": {
+              "active": true,
+              "class": "mbr-iconfont mbr-iconfont-features16",
+              "name": "rocket",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fc7a60",
+              "family": "cm-icon"
+            }
+          },
+          "media5": {
+            "iconFont": {
+              "active": true,
+              "class": "mbr-iconfont mbr-iconfont-features16",
+              "name": "globe",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fc7a60",
+              "family": "cm-icon"
+            }
+          },
+          "media6": {
+            "iconFont": {
+              "active": true,
+              "class": "mbr-iconfont mbr-iconfont-features16",
+              "name": "compass",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fc7a60",
+              "family": "cm-icon"
+            }
+          },
+          "title": "Features",
+          "title1": "Bootstrap 4",
+          "subtitle1": "Bootstrap 4 has been noted",
+          "caption1": "Bootstrap 4 has been noted as one of the most reliable and proven frameworks and Mobirise has been equipped to develop websites using this framework.",
+          "title2": "Responsive",
+          "subtitle2": "One of Bootstrap 4's big points",
+          "caption2": "One of Bootstrap 4's big points is responsiveness and Mobirise makes effective use of this by generating highly responsive website for you.",
+          "title3": "Web Fonts",
+          "subtitle3": "Google has a highly exhaustive list of fonts",
+          "caption3": "Google has a highly exhaustive list of fonts compiled into its web font platform and Mobirise makes it easy for you to use them on your website easily and freely.",
+          "title4": "Unlimited Sites",
+          "subtitle4": "Mobirise gives you the freedom to develop",
+          "caption4": "Mobirise gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.",
+          "title5": "Trendy Website Blocks",
+          "subtitle5": "Choose from the large selection of blocks",
+          "caption5": "Choose from the large selection of latest pre-made blocks - jumbotrons, hero images, parallax scrolling, video backgrounds, hamburger menu, sticky header and more.",
+          "title6": "Host Anywhere",
+          "subtitle6": "Don't limit yourself to just one platform",
+          "caption6": "Publish your website to a local drive, FTP or host on Amazon S3, Google Drive, Github. Don't limit yourself to just one platform or service provider.",
+          "buttons": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-lg btn-primary\">learn more</a>",
+          "alias": "colorm/components",
+          "_tags": [
+            "Tema"
+          ],
+          "_name": "features16",
+          "_anchor": "features16-2"
+        },
+        {
+          "_params": {
+            "showTitle": true,
+            "showText": false,
+            "tabs": "3",
+            "paddingTop": 2,
+            "paddingBottom": "2",
+            "bgImageRadio": false,
+            "bgImage": "@THEME_PATH@/components/_images/img_extAccordion1_bg.jpg",
+            "parallax": false,
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "http://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": true,
+            "overlayColor": "#151515",
+            "overlayOpacity": 0.5
+          },
+          "title": "Accordion FAQ",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae nostrum quis ab, fuga ducimus, eligendi facere atque provident tempore vitae, cupiditate fugit explicabo. Nostrum quidem itaque blanditiis maxime, perferendis numquam ab a exercitationem impedit repellat, voluptate sunt! Veritatis, nam.",
+          "title1": "<a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion1-3-init\" data-core=\"\" href=\"#collapseOneaccordion1-3\" aria-expanded=\"false\" aria-controls=\"collapseOne\"><span class=\"sign\"></span>What is Mobirise?</a>",
+          "title2": "<a role=\"button\" class=\"\" data-toggle=\"collapse\" data-parent=\"#accordion1-3-init\" data-core=\"\" href=\"#collapseTwoaccordion1-3\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">Is it good for me?</a>",
+          "title3": "<a role=\"button\" class=\"\" data-toggle=\"collapse\" data-parent=\"#accordion1-3-init\" data-core=\"\" href=\"#collapseThreeaccordion1-3\" aria-expanded=\"true\" aria-controls=\"collapseThree\">Why Mobirise?</a>",
+          "title4": "<a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" data-core=\"\" href=\"#collapseFour\" aria-expanded=\"false\" aria-controls=\"collapseFour\">This is a accordion Title 4</a>",
+          "title5": "<a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" data-core=\"\" href=\"#collapseFive\" aria-expanded=\"false\" aria-controls=\"collapseFive\">This is a accordion Title 5</a>",
+          "title6": "<a role=\"button\" class=\"collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" data-core=\"\" href=\"#collapseSix\" aria-expanded=\"false\" aria-controls=\"collapseSix\">This is a accordion Title 6</a>",
+          "text1": "<p>Mobirise is an offline app for Window and Mac to easily create small/medium websites, landing pages, online resumes and portfolios, promo sites for apps, events, services and products.</p>",
+          "text2": "<p>Mobirise is perfect for non-techies who are not familiar with the intricacies of web development and for designers who prefer to work as visually as possible, without fighting with code. Also great for pro-coders for fast prototyping and small customers' projects.</p>",
+          "text3": "<p>Key differences from traditional builders:<br>* Minimalistic, extremely <strong>easy-to-use</strong> interface<br>* <strong>Mobile</strong>-friendliness, latest website blocks and techniques \"out-the-box\"<br>* <strong>Free</strong> for commercial and non-profit use</p>",
+          "text4": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in nulla ut magna vehicula libero luctus in ipsum consequat faucibus. Ut porta nulla ac dapibus convallis. Curabitur sit amet massa quam. In ut ex auctor, porta neque quis, sagittis purus. Nunc auctor gravida magna, sed efficitur tortor tristique quis.</p>",
+          "text5": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in nulla ut magna vehicula libero luctus in ipsum consequat faucibus. Ut porta nulla ac dapibus convallis. Curabitur sit amet massa quam. In ut ex auctor, porta neque quis, sagittis purus. Nunc auctor gravida magna, sed efficitur tortor tristique quis.</p>",
+          "text6": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in nulla ut magna vehicula libero luctus in ipsum consequat faucibus. Ut porta nulla ac dapibus convallis. Curabitur sit amet massa quam. In ut ex auctor, porta neque quis, sagittis purus. Nunc auctor gravida magna, sed efficitur tortor tristique quis.</p>",
+          "alias": "colorm/components",
+          "_tags": [
+            "Tema"
+          ],
+          "_name": "accordion1",
+          "_anchor": "accordion1-3"
+        },
+        {
+          "_styles": {
+            ".mbr-section-text": {
+              "color": "#fff"
+            }
+          },
+          "_params": {
+            "paddingTop": 2,
+            "paddingBottom": 2,
+            "bgImageRadio": false,
+            "bgImage": "@THEME_PATH@/components/_images/jumbotron.jpg",
+            "parallax": true,
+            "bgColorRadio": true,
+            "bgColor": "#323232",
+            "overlay": true,
+            "overlayColor": "#444444",
+            "overlayOpacity": 0.8
+          },
+          "text": "Copyright (c) 2016 <a href=\"http://mobirise.com\">Mobirise</a>.",
+          "alias": "colorm/components",
+          "_tags": [
+            "Tema"
+          ],
+          "_name": "footer2",
+          "_anchor": "footer2-5"
+        }
+      ]
+    }
+  }
+}

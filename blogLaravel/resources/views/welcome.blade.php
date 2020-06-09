@@ -37,155 +37,69 @@
 </section>
 
 <section class="mbr-section mbr-section-hero news" id="news1-7" data-rv-view="14" style="background-color: rgb(255, 255, 255); padding-top: 80px; padding-bottom: 80px;">
+    @foreach($temasDestacados as $temaDestacado)
         <div class="container-fluid">
-            
+            {{-- Mostramos fila --}}
             <div class="row">
-
                 <div class="col-xs-12 col-lg-10 col-lg-offset-1">
-
-                    <div class="col-xs-12 col-lg-4">
-                        <div class="jsNewsCard news__card" modal-id="#lb-news1-7_0">
-                            <div class="news__image">
-                                <img class="news__img" alt="" src="assets/images/01.jpeg">
-                            </div>
-                            <div class="news__inner">
-                                <h5 class="mbr-section-title display-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
-                                <p class="mbr-section-text lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sit molestias error, magni deleniti consectetur voluptas soluta, placeat quo voluptatem tempora ullam, velit in sunt suscipit recusandae natus quia porro eveniet? Quis vitae ad voluptas, ullam deserunt. Odit sapiente laborum, obcaecati facere iusto animi alias iste quis. Itaque molestiae quibusdam voluptatibus suscipit, quisquam sequi reiciendis minima nihil. Reiciendis sed, mollitia minima aliquam! Porro vitae error enim totam accusamus consequuntur laboriosam, esse quisquam nulla quibusdam! Libero consequuntur saepe, quo perspiciatis itaque beatae accusamus minus veniam aspernatur, neque, dignissimos repellat modi laborum commodi dolores officia voluptates! Molestias cumque adipisci ipsa, rerum non.</p>
-                                <div class="news__date">
-                                    <span class="cm-icon cm-icon-clock"></span>
-                                    <p>10 june 2016</p>
+                    {{-- Mostramos 3 artículos --}}
+                    @foreach($temaDestacado->articles->sortByDesc('id')->take(3) as $articulo)
+                        <div class="col-xs-12 col-lg-4">
+                            <div class="jsNewsCard news__card" modal-id="#{{ $articulo->id }}">
+                                <div class="news__image">
+                                    <img class="news__img" alt="" src="{{ Storage::url('imagenesArticulos/'.$articulo->imagenDestacada()) }}">
                                 </div>
-                                
-                            </div>  
-                        </div>                                                
-                    </div><div class="col-xs-12 col-lg-4">
-                        <div class="jsNewsCard news__card" modal-id="#lb-news1-7_1">
-                            <div class="news__image">
-                                <img class="news__img" alt="" src="assets/images/02.jpeg">
-                            </div>
-                            <div class="news__inner">
-                                <h5 class="mbr-section-title display-6">Lorem ipsum dolor sit amet, Illo autem, cum voluptas?</h5>
-                                <p class="mbr-section-text lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At id in ipsam accusantium totam ex est, repellat, reiciendis non et minus beatae velit animi eaque nemo nam enim, praesentium accusamus, saepe ut odit eligendi asperiores. Nemo quis expedita dignissimos officia, aliquam ex porro explicabo dicta, molestias, quisquam pariatur ea ratione neque distinctio magni iusto est, alias iste repellendus. Deleniti, quis laboriosam libero doloremque iste nostrum molestias alias dicta suscipit labore reiciendis eum quas facere placeat repellat voluptate quaerat accusamus corrupti. Amet, iusto, suscipit nemo perferendis blanditiis laudantium dolor voluptate eaque, sint, enim corporis eius necessitatibus accusantium magni dignissimos non neque.</p>
-                                <div class="news__date">
-                                    <span class="cm-icon cm-icon-clock"></span>
-                                    <p>10 june 2016</p>
-                                </div>
-                                
-                            </div>  
-                        </div>                                                
-                    </div><div class="col-xs-12 col-lg-4">
-                        <div class="jsNewsCard news__card" modal-id="#lb-news1-7_2">
-                            <div class="news__image">
-                                <img class="news__img" alt="" src="assets/images/03.jpeg">
-                            </div>
-                            <div class="news__inner">
-                                <h5 class="mbr-section-title display-6">Ad harum eos, quisquam assumenda molestiae neque veritatis</h5>
-                                <p class="mbr-section-text lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae delectus, laborum consequatur assumenda placeat, porro aspernatur cumque vero fugit harum quis modi obcaecati vel itaque numquam tenetur voluptatum maxime culpa quam eum consectetur veniam. Itaque totam, doloribus at? Tenetur, temporibus mollitia cupiditate. Doloremque quasi fugit velit et similique, neque optio facilis perferendis vitae minima quidem veniam totam quaerat suscipit tenetur aperiam id molestiae nobis cupiditate a rem dolorum doloribus? Suscipit officia expedita, nostrum et tempora amet repellat. Est molestiae odit debitis eaque, accusantium tempora. Ipsam eligendi dolores, illum magni maiores. Temporibus accusantium velit earum et repellendus labore accusamus iusto id.</p>
-                                <div class="news__date">
-                                    <span class="cm-icon cm-icon-clock"></span>
-                                    <p>10 june 2016</p>
-                                </div>
-                                
-                            </div>  
-                        </div>                                                
-                    </div>
-
+                                <div class="news__inner">
+                                    <h5 class="mbr-section-title display-6">{{ $articulo->titulo }}</h5>
+                                    <p class="mbr-section-text lead">{{ $articulo->contenido }}</p>
+                                    <div class="news__date">
+                                        <span class="cm-icon cm-icon-clock"></span>
+                                        <p>{{ $articulo->created_at->diffForHumans() }}</p>
+                                    </div>
+                                </div>  
+                            </div>                                                
+                        </div>
+                    @endforeach
                 </div>
-
             </div>
-
         </div>
-
-        <div data-app-prevent-settings="" class="modal fade" tabindex="-1" data-keyboard="true" data-interval="false" id="lb-news1-7_0">
+        
+        @foreach($temaDestacado->articles->sortByDesc('id')->take(3) as $articulo)
+            <div data-app-prevent-settings="" class="modal fade" tabindex="-1" data-keyboard="true" data-interval="false" id="{{ $articulo->id }}">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <div class="news__card" href="#lb-news1-7">
-                                <div class="news__image">
-                                    <img class="news__img" alt="" src="assets/images/01.jpeg">
-                                </div>
+                            <div class="news__card" href="#{{ $articulo->id }}">
+                                @if($articulo->images->first())                        
+                                    <div class="news__image">
+                                        {{-- Sacamos las imagenes en el modal (hemos puesto que aparezcan 3) --}}
+                                        @foreach($articulo->images as $imagen)
+                                        <img class="news__img" alt="" src="{{ Storage::url('imagenesArticulos/'.$imagen->nombre) }}">
+                                        @endforeach
+                                    </div>
+                                @endif    
                                 <div class="news__inner">
-                                    <h5 class="mbr-section-title display-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
-                                    <p class="mbr-section-text lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sit molestias error, magni deleniti consectetur voluptas soluta, placeat quo voluptatem tempora ullam, velit in sunt suscipit recusandae natus quia porro eveniet? Quis vitae ad voluptas, ullam deserunt. Odit sapiente laborum, obcaecati facere iusto animi alias iste quis. Itaque molestiae quibusdam voluptatibus suscipit, quisquam sequi reiciendis minima nihil. Reiciendis sed, mollitia minima aliquam! Porro vitae error enim totam accusamus consequuntur laboriosam, esse quisquam nulla quibusdam! Libero consequuntur saepe, quo perspiciatis itaque beatae accusamus minus veniam aspernatur, neque, dignissimos repellat modi laborum commodi dolores officia voluptates! Molestias cumque adipisci ipsa, rerum non.</p>
+                                    <h5 class="mbr-section-title display-6">{{ $articulo->titulo }}</h5>
+                                    <p class="mbr-section-text lead">{{ $articulo->contenido }}</p>
                                     <div class="news__date">
                                         <span class="cm-icon cm-icon-clock"></span>
-                                        <p>10 june 2016</p>
+                                        <p>{{ $articulo->created_at }}</p>
                                     </div>
-
                                     <a class="close" href="#" role="button" data-dismiss="modal">
                                         <span aria-hidden="true">×</span>
-                                        <span class="sr-only">Close</span>
+                                        <span class="sr-only">Cerrar</span>
                                     </a>
-                                
-                                </div>  
-
-                                
+                                </div>          
                             </div>   
-
-                        </div>
-                    </div>
-                </div>
-            </div><div data-app-prevent-settings="" class="modal fade" tabindex="-1" data-keyboard="true" data-interval="false" id="lb-news1-7_1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div class="news__card" href="#lb-news1-7">
-                                <div class="news__image">
-                                    <img class="news__img" alt="" src="assets/images/02.jpeg">
-                                </div>
-                                <div class="news__inner">
-                                    <h5 class="mbr-section-title display-6">Lorem ipsum dolor sit amet, Illo autem, cum voluptas?</h5>
-                                    <p class="mbr-section-text lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At id in ipsam accusantium totam ex est, repellat, reiciendis non et minus beatae velit animi eaque nemo nam enim, praesentium accusamus, saepe ut odit eligendi asperiores. Nemo quis expedita dignissimos officia, aliquam ex porro explicabo dicta, molestias, quisquam pariatur ea ratione neque distinctio magni iusto est, alias iste repellendus. Deleniti, quis laboriosam libero doloremque iste nostrum molestias alias dicta suscipit labore reiciendis eum quas facere placeat repellat voluptate quaerat accusamus corrupti. Amet, iusto, suscipit nemo perferendis blanditiis laudantium dolor voluptate eaque, sint, enim corporis eius necessitatibus accusantium magni dignissimos non neque.</p>
-                                    <div class="news__date">
-                                        <span class="cm-icon cm-icon-clock"></span>
-                                        <p>10 june 2016</p>
-                                    </div>
-
-                                    <a class="close" href="#" role="button" data-dismiss="modal">
-                                        <span aria-hidden="true">×</span>
-                                        <span class="sr-only">Close</span>
-                                    </a>
-                                
-                                </div>  
-
-                                
-                            </div>   
-
-                        </div>
-                    </div>
-                </div>
-            </div><div data-app-prevent-settings="" class="modal fade" tabindex="-1" data-keyboard="true" data-interval="false" id="lb-news1-7_2">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div class="news__card" href="#lb-news1-7">
-                                <div class="news__image">
-                                    <img class="news__img" alt="" src="assets/images/03.jpeg">
-                                </div>
-                                <div class="news__inner">
-                                    <h5 class="mbr-section-title display-6">Ad harum eos, quisquam assumenda molestiae neque veritatis</h5>
-                                    <p class="mbr-section-text lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae delectus, laborum consequatur assumenda placeat, porro aspernatur cumque vero fugit harum quis modi obcaecati vel itaque numquam tenetur voluptatum maxime culpa quam eum consectetur veniam. Itaque totam, doloribus at? Tenetur, temporibus mollitia cupiditate. Doloremque quasi fugit velit et similique, neque optio facilis perferendis vitae minima quidem veniam totam quaerat suscipit tenetur aperiam id molestiae nobis cupiditate a rem dolorum doloribus? Suscipit officia expedita, nostrum et tempora amet repellat. Est molestiae odit debitis eaque, accusantium tempora. Ipsam eligendi dolores, illum magni maiores. Temporibus accusantium velit earum et repellendus labore accusamus iusto id.</p>
-                                    <div class="news__date">
-                                        <span class="cm-icon cm-icon-clock"></span>
-                                        <p>10 june 2016</p>
-                                    </div>
-
-                                    <a class="close" href="#" role="button" data-dismiss="modal">
-                                        <span aria-hidden="true">×</span>
-                                        <span class="sr-only">Close</span>
-                                    </a>
-                                
-                                </div>  
-
-                                
-                            </div>   
-
                         </div>
                     </div>
                 </div>
             </div>
-
+        @endforeach
+    @endforeach
 </section>
+
+        
 
 <section class="mbr-section mbr-section-hero features16" id="features16-2" data-rv-view="27" style="background-color: rgb(249, 89, 58); padding-top: 80px; padding-bottom: 80px;">
 

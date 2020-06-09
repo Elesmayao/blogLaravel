@@ -10,5 +10,6 @@ $factory->define(App\Theme::class, function (Faker $faker) {
         'nombre' => ucfirst($nombre),
         'slug' => $nombre,
         'destacado' => $faker->boolean(false),
+        'suscripcion' => $faker->boolean(false),
     ];
 });

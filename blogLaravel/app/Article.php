@@ -35,4 +35,13 @@ class Article extends Model
             return 'sin_imagen.jpg';
         return $imagenDestacada->nombre;
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope('activo', function ($query) {
+            return $query->where('activo', true);
+        });
+    }
 }
