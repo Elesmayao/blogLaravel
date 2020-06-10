@@ -25,17 +25,19 @@ class Theme extends Model
     }
 
     /*Accesor para el campo destacados ( Para que en vez de salir en este apartado numero salga Si o No )*/
-    public function getDestacadoAttribute($valor)
+    public function getEsDestacadoAttribute()
     {
-        if($valor)
+        $esDestacado=$this->destacado;
+        if($esDestacado)
             return 'Si';
         return 'No';
     }
 
     /*Accesor para el campo suscripcion ( Para que en vez de salir en este apartado numero salga Si o No )*/
-    public function getSuscripcionAttribute($valor)
+    public function getEsSuscripcionAttribute()
     {
-        if($valor)
+        $esSuscripcion=$this->suscripcion;
+        if($esSuscripcion)
             return 'Si';
         return 'No';
     }

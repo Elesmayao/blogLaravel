@@ -46,12 +46,15 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 </head>
-
+<body>
 <section class="menu1" id="menu-0" data-rv-view="0">
     <nav style="background-color: green" class="navbar navbar-dropdown navbar-fixed-top">
         <div class="container-fluid">
             <div class="mbr-table">
             	<div class="mbr-table-cell">
+                    <div class="navbar-brand">
+                        <a class="navbar-caption">@yield('rol','Zona Administrador') / {{ $miga }}</a>
+                    </div>
             	</div>	
                 <div class="mbr-table-cell">
 					@if(auth()->check())
@@ -63,6 +66,9 @@
                     <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
                         <li class="nav-item">
                             <a class="nav-link link" href="{{ url('/') }}" aria-expanded="false">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link" href="{{ url('/admin/temas') }}" aria-expanded="false">Temas</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="https://mobirise.com/" aria-expanded="false">
@@ -92,7 +98,7 @@
         </div>
     </nav>
   </section>
-
+</body>
   {{-- Hace referencia a content de "welcome" --}}
   @yield('content')
 

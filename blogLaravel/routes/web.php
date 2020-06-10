@@ -25,3 +25,7 @@ Route::put('/usuario-actualizar','UserController@update');
 //Rutas de Administrador
 Route::get('admin/temas','admin\ThemeController@index');
 Route::delete('admin/temas/{tema}','admin\ThemeController@destroy')->name('tema.delete');
+Route::get('admin/temas/{tema}/edit','admin\ThemeController@edit')->name('tema.edit');
+Route::put('admin/temas/{tema}','admin\ThemeController@update')->name('tema.update');
+Route::get('admin/temas/create','admin\ThemeController@create')->name('tema.create');
+Route::post('admin/temas','admin\ThemeController@store')->name('tema.store');

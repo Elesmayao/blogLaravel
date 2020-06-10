@@ -3,10 +3,15 @@
 @section('content')
 
 <div style="margin-top: 150px; margin-bottom: 180px;" class="container">
-	<button type="button" class="btn btn-info"><a href="#">Añadir Nuevo Tema</a></button>
+	<button type="button" class="btn btn-info"><a href="{{ route('tema.create') }}">Añadir Nuevo Tema</a></button>
 	@if(session('notificacion'))
 		<div class="alert alert-success" role="alert">
 			{{ session('notificacion') }}
+		</div>
+	@endif
+	@if(session('notificacion2'))
+		<div class="alert alert-success" role="alert">
+			{{ session('notificacion2') }}
 		</div>
 	@endif
 	<table class="table table-hover">
@@ -30,10 +35,10 @@
 					<td>{{ $tema->nombre }}</td>
 					<td>{{ $tema->user->name }}</td>
 					<td>{{ $tema->created_at->toDayDateTimeString() }}</td>
-					<td>{{ $tema->suscripcion }}</td>
-					<td>{{ $tema->destacado }}</td>
+					<td>{{ $tema->EsSuscripcion }}</td>
+					<td>{{ $tema->EsDestacado }}</td>
 					<td>
-						<a href="#">
+						<a href="{{ route('tema.edit',$tema) }}">
 							<img width="25px" src="{{ asset('imagenes/admin/editar.png') }}" alt="title 1" title="title 1">
 						</a>
 					</td>
