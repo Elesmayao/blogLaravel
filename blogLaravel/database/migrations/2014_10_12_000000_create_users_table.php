@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('alias')->unique(); //añadido mio
             $table->boolean('bloqueado')->default(false);
+            $table->boolean('es_admin')->default(false);
             $table->string('web')->nullable(); //añadido mio
             $table->string('password');
             $table->rememberToken();

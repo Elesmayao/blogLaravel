@@ -15,6 +15,10 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $users=factory(User::class,10)->create();
+        //Todos los usuarios creados se crea con el rol 1(usuario)
+        $users->each(function ($user){
+            $user->roles()->sync(1);
+        });
         /*1 usuario crea un tema*/
        /* $users->each(function($user){
         	$themes=factory(Theme::class,1)->make();

@@ -55,7 +55,7 @@ class ThemeController extends Controller
         $tema->destacado=$request->destacado;
         $tema->suscripcion=$request->suscripcion;*/
         $tema->user_id=auth()->user()->id;
-        $tema->slug=strtolower(str_replace(" ","-",$request->nombre));
+        $tema->slug=mb_strtolower((str_replace(" ","-",$request->nombre)),'UTF-8');
         $tema->save();
         $temaNombre = $tema->nombre;
         $notificacion="El tema $temaNombre se ha añadido correctamente";

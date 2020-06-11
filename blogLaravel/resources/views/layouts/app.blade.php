@@ -119,6 +119,10 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    {{-- Si es admin se le añade al menu el panel admin --}}
+                                    @if(auth()->user()->hasRole('administrador'))
+                                        <a class="dropdown-item" href="{{ url('/admin/temas') }}">Panel Admin</a>
+                                    @endif
                                     <a class="dropdown-item" href="{{ url('/home') }}">Perfil</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

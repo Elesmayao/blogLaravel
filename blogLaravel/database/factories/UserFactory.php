@@ -22,6 +22,7 @@ $factory->define(App\User::class, function (Faker $faker) {
         'alias' => $faker->unique()->word,
         'web' => $faker->safeEmailDomain,
         'bloqueado' => $faker->boolean(false),
+        'es_admin' => $faker->boolean(false),
         //Hecho por mi
         /*'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret*/
         'password' => bcrypt('12345'),
