@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form method="POST" action="{{ route('tema.store') }}" class="temaFormuEdit">
+<form method="POST" action="{{ route('tema.store') }}" enctype="multipart/form-data" class="temaFormuEdit">
 	@csrf
 	<div style="margin-top: 150px; margin-bottom: 180px;" class="container">
 		@if(session('notificacion'))

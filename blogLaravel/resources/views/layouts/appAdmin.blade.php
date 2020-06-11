@@ -70,6 +70,9 @@
                         <li class="nav-item">
                             <a class="nav-link link" href="{{ url('/admin/temas') }}" aria-expanded="false">Temas</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link link" href="{{ url('/admin/articulos') }}" aria-expanded="false">Articulos</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link link dropdown-toggle" data-toggle="dropdown-submenu" href="https://mobirise.com/" aria-expanded="false">
                             	{{ Auth::user()->name }} <span class="caret"></span>

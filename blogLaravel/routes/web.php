@@ -29,3 +29,8 @@ Route::get('admin/temas/{tema}/edit','admin\ThemeController@edit')->name('tema.e
 Route::put('admin/temas/{tema}','admin\ThemeController@update')->name('tema.update');
 Route::get('admin/temas/create','admin\ThemeController@create')->name('tema.create');
 Route::post('admin/temas','admin\ThemeController@store')->name('tema.store');
+
+//CRUD artículos, las rutas se crean en admin/articulos
+Route::resource('admin/articulos','admin\ArticleController');
+//Ruta para eliminar imagenes
+Route::get('admin/imagenes/{imagen}','admin\ArticleImageController@destroy')->name('imagen.delete');

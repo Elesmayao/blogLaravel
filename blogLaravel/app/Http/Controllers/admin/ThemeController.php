@@ -50,12 +50,12 @@ class ThemeController extends Controller
         }
 
         //Creamos un objeto y le asignamos atributos
-        $tema=new Theme();
-        $tema->user_id=auth()->user()->id;
-        $tema->nombre=$request->nombre;
-        $tema->slug=strtolower(str_replace(" ","-",$request->nombre));
+        $tema=new Theme($request->all());
+        /*$tema->nombre=$request->nombre;
         $tema->destacado=$request->destacado;
-        $tema->suscripcion=$request->suscripcion;
+        $tema->suscripcion=$request->suscripcion;*/
+        $tema->user_id=auth()->user()->id;
+        $tema->slug=strtolower(str_replace(" ","-",$request->nombre));
         $tema->save();
         $temaNombre = $tema->nombre;
         $notificacion="El tema $temaNombre se ha añadido correctamente";
@@ -93,10 +93,11 @@ class ThemeController extends Controller
 
         $this->validate($request, $rules, $messages);
 
-        $tema->nombre=$request->nombre;
+        /*$tema->nombre=$request->nombre;
         $tema->destacado=$request->destacado;
-        $tema->suscripcion=$request->suscripcion;
-        $tema->save();
+        $tema->suscripcion=$request->suscripcion;*/
+        /*$tema->save();*/
+        $tema->update($request->all());
         $miga='Temas';
         $notificacion2='El tema se ha actualizado correctamente';
         return redirect('admin/temas')->with(compact('notificacion2','miga'));

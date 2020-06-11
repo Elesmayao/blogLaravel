@@ -4,9 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Article;
+use App\Scopes\ActiveScope;
 
 class Article extends Model
 {
+
+    protected $fillable=['titulo','contenido','activo','theme_id'];
 
     // $article->theme
     public function theme()
@@ -43,5 +46,14 @@ class Article extends Model
         static::addGlobalScope('activo', function ($query) {
             return $query->where('activo', true);
         });
+    }
+
+    //Accesor artículo activado Si/No
+    public function getEstaActivadoAttribute()
+    {
+        $estaActivado=$this->activo;
+        if($estaActivado)
+            return 'Si';
+        return 'No';
     }
 }

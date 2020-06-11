@@ -115,7 +115,8 @@
 		                        @endif    
 		                        <div class="news__inner">
 		                            <h5 class="mbr-section-title display-6">{{ $articulo->titulo }}</h5>
-		                            <p class="mbr-section-text lead">{{ $articulo->contenido }}</p>
+		                            {{-- PONEMOS LAS !! PARA QUE FUNCIONE EL CSKEDITOR --}}
+		                            <p class="mbr-section-text lead">{!! $articulo->contenido !!}</p>
 		                            <div class="news__date">
 		                                <span class="cm-icon cm-icon-clock"></span>
 		                                <p>{{ $articulo->created_at }}</p>
