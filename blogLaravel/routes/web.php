@@ -17,9 +17,9 @@ Route::get('/tema/{tema}','ThemeController@show')->name('tema.show'); //articulo
 Route::get('/buscador','SearchController@index');
 
 // Rutas de los usuarios autenticados
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 Route::put('/usuario-actualizar','UserController@update');
 
 //Rutas de Administrador
@@ -41,11 +41,15 @@ Route::middleware(['auth','role:administrador'])->group(function(){
 		
 	Route::resource('admin/usuarios','admin\UserController')->only(['index','edit','update']);
 	Route::get('admin/buscador/usuarios','admin\SearchUserController@index');
+
+	//Ruta envio de correo
+	Route::get('admin/correo-masivo','admin\CorreoMasivoController@index');
+	Route::post('admin/correo-masivo','admin\CorreoMasivoController@correoMasivo');
 });
 
 
 //Rutas de Moderador
-Route::middleware(['auth','role:moderador'])->group(function(){
+Route::middleware(['auth','verified','role:moderador'])->group(function(){
 	//Hacemos esto para que no haya conflicto con el resource de administrador ya que usan los mismos métodos
 		Route::resource('moderador/articulos','moderador\ArticleController', ['names' => [
 			'index' => 'moderador.articulos.index',

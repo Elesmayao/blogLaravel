@@ -5,8 +5,8 @@
 
 <section class="mbr-section mbr-section-hero news" id="news1-7" data-rv-view="14" style="background-color: rgb(255, 255, 255); padding-top: 180px; padding-bottom: 120px;">
     
-    {{-- Si el usuario está autenticado mostramos todos los artículos --}}
-	@if($usuarioAutenticado && !$usuarioBloqueado)
+    {{-- Si el usuario está autenticado,no bloqueado y verificado mostramos todos los artículos --}}
+	@if($usuarioAutenticado && !$usuarioBloqueado && $usuarioVerificado)
 	    <div class="container-fluid">
 	    	<div class="row">
 	    		<div class="col-xs-12 col-lg-10 col-lg-offset-6">{{ $tema->nombre }}</div>
@@ -89,6 +89,14 @@
 		<div class="alert alert-danger" role="alert">
 			<h4>Lo sentimos!</h4>
 			<p>Este usuario ha sido bloqueado</p>
+		</div>
+	</div>
+	
+	@elseif(!$usuarioVerificado)
+	<div style="width: 500px;margin: 20px auto 50px auto;">
+		<div class="alert alert-danger" role="alert">
+			<h4>Lo sentimos!</h4>
+			<p>Este usuario no ha verificado su cuenta</p>
 		</div>
 	</div>
 	@endif

@@ -23,12 +23,25 @@ class SearchController extends Controller
     	/*si el usuario esta autenticado*/
     	if(auth()->check())
     	{
-            /*Comprobamos que no esté bloqueado*/
-            if(!auth()->user()->bloqueado)
+            if(!is_null(auth()->user()->email_verified_at))
             {
-        		$articulos=Article::where('titulo','like',"%$busqueda%")->with(['images'])->orderBy('id','desc')->get();
-                return view('buscador')->with(compact('articulos'));
+                /*Comprobamos que no esté bloqueado*/
+                if(!auth()->user()->bloqueado)
+                {
+            		$articulos=Article::where('titulo','like',"%$busqueda%")->with(['images'])->orderBy('id','desc')->get();
+                    return view('buscador')->with(compact('articulos'));
+                }
+                $articulos=Article::where('titulo','like',"%$busqueda%")->with(['images'])->orderBy('id','desc')->get();
+
+                foreach($articulos as $articulo)
+                {
+                    /*Si no pertenece a un tema con suscripcion*/
+                    if(!$articulo->theme->suscripcion)
+                        $articulosPermitidos->push($articulos);
+                }
+                return view('buscador')->with(compact('articulosPermitidos'));
             }
+
             $articulos=Article::where('titulo','like',"%$busqueda%")->with(['images'])->orderBy('id','desc')->get();
 
             foreach($articulos as $articulo)
@@ -38,8 +51,8 @@ class SearchController extends Controller
                     $articulosPermitidos->push($articulos);
             }
             return view('buscador')->with(compact('articulosPermitidos'));
-
     	}
+        
         /*Si no está autenticado*/
         $articulos=Article::where('titulo','like',"%$busqueda%")->with(['images'])->orderBy('id','desc')->get();
 

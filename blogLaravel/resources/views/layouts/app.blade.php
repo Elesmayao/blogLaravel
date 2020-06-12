@@ -8,7 +8,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="{{ asset('assets/images/img-laravel-128x128.png') }}" type="image/x-icon">
     <meta name="description" content="">
-    <title>@yield('title','BlogLaravel')</title>
+     {{-- <title>@yield('title','BlogLaravel')</title> --}}
+     <title>@yield('title',config('app.name'))</title>
 
     <!-- Scripts -->
     
@@ -56,7 +57,7 @@
 
                     <div class="navbar-brand">
                         <a href="https://mobirise.com" class="navbar-logo"><img src="{{ asset('assets/images/img-laravel-128x128.png') }}" alt="Mobirise"></a>
-                        <a class="navbar-caption text-white" href="https://mobirise.com">BLOGLARAVEL</a>
+                        <a class="navbar-caption text-white" href="https://mobirise.com">{{ config('app.name') }}</a>
                     </div>
 
                 </div>
