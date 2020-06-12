@@ -3,7 +3,6 @@
 @section('content')
 
 <div style="margin-top: 150px; margin-bottom: 180px;" class="container">
-	<button type="button" class="btn btn-info"><a href="{{ route('articulos.create') }}">Añadir Nuevo Articulo</a></button>
 	<div style="margin-top: 20px">
 		<form class="form-inline" action="{{ url('admin/buscador/articulos') }}" method="GET">
 			@csrf
@@ -24,7 +23,7 @@
 		</div>
 	@endif
 	<div class="row" style="margin-left: 50%;">
-		<strong>{{ $todosArticulos }} Artículos</strong>
+		<strong>{{ $articulos->count() }} Artículos</strong>
 	</div>
 	<table class="table table-hover">
 		<thead class="thead-dark">
@@ -73,9 +72,4 @@
 			</tbody>
 		@endforeach
 	</table>
-	<div class="row">
-		<div class="col-xs-12 col-lg-10 col-lg-offset-1">
-			{{ $articulos->links() }}
-		</div>
-	</div>
 </div>

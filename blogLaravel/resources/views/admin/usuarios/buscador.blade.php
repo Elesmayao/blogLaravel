@@ -3,6 +3,11 @@
 @section('content')
 
 <div style="margin-top: 150px; margin-bottom: 180px;" class="container">
+	@if(session('notificacion'))
+		<div class="alert alert-success" role="alert">
+			{{ session('notificacion') }}
+		</div>
+	@endif
 	<div style="margin-top: 20px">
 		<form class="form-inline" action="{{ url('admin/buscador/usuarios') }}" method="GET">
 			@csrf
@@ -12,11 +17,6 @@
 			<button style="margin-top: 8px" type="submit" class="btn btn-warning btn-sm">Buscar</button>
 		</form>
 	</div>
-	@if(session('notificacion'))
-		<div class="alert alert-success" role="alert">
-			{{ session('notificacion') }}
-		</div>
-	@endif
 	<div class="row" style="margin-left: 50%;">
 		<strong>{{ $usuarios->count() }} Usuarios</strong>
 	</div>
@@ -56,9 +56,4 @@
 			</tbody>
 		@endforeach
 	</table>
-	<div class="row">
-		<div class="col-xs-12 col-lg-10 col-lg-offset-1">
-			{{ $usuarios->links() }}
-		</div>
-	</div>
 </div>

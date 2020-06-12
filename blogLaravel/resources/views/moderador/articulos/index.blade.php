@@ -1,11 +1,11 @@
-@extends('layouts.appAdmin')
+@extends('layouts.appModerador')
 
 @section('content')
 
 <div style="margin-top: 150px; margin-bottom: 180px;" class="container">
-	<button type="button" class="btn btn-info"><a href="{{ route('articulos.create') }}">Añadir Nuevo Articulo</a></button>
+	<button type="button" class="btn btn-info"><a href="{{ route('moderador.articulos.create') }}">Añadir Nuevo Articulo</a></button>
 	<div style="margin-top: 20px">
-		<form class="form-inline" action="{{ url('admin/buscador/articulos') }}" method="GET">
+		<form class="form-inline" action="{{ url('moderador/buscador/articulos') }}" method="GET">
 			@csrf
 			<div class="form-group">
 				<input type="text" class="form-control" id="exampleInputEmail2" name="busqueda" placeholder="Buscar por tema o usuario">
@@ -51,17 +51,17 @@
 					<td>{{ $articulo->created_at->toDayDateTimeString() }}</td>
 					<td>{{ $articulo->EstaActivado }}</td>
 					<td>
-						<a href="{{ route('articulos.show',$articulo->id) }}">
+						<a href="{{ route('moderador.articulos.show',$articulo->id) }}">
 							<img width="25px" src="{{ asset('imagenes/admin/ver.png') }}" alt="title 1" title="title 1">
 						</a>
 					</td>
 					<td>
-						<a href="{{ route('articulos.edit',$articulo->id) }}">
+						<a href="{{ route('moderador.articulos.edit',$articulo->id) }}">
 							<img width="25px" src="{{ asset('imagenes/admin/editar.png') }}" alt="title 1" title="title 1">
 						</a>
 					</td>
 					<td>
-						<form method="POST" action="{{ route('articulos.destroy',$articulo->id) }}">
+						<form method="POST" action="{{ route('moderador.articulos.destroy',$articulo->id) }}">
 							@csrf
 							{{ method_field('DELETE') }}
 							<button style=" background-color: white; border: 0" type="submit" onclick="return confirm('¿Estás seguro que quieres eliminar este artículo?')"> 

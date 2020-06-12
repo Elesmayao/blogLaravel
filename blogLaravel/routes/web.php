@@ -36,7 +36,26 @@ Route::middleware(['auth','role:administrador'])->group(function(){
 	Route::resource('admin/articulos','admin\ArticleController');
 	//Ruta para eliminar imagenes
 	Route::get('admin/imagenes/{imagen}','admin\ArticleImageController@destroy')->name('imagen.delete');
-
+	//
+	Route::get('admin/buscador/articulos','admin\SearchArticleController@index');
 		
 	Route::resource('admin/usuarios','admin\UserController')->only(['index','edit','update']);
+	Route::get('admin/buscador/usuarios','admin\SearchUserController@index');
+});
+
+
+//Rutas de Moderador
+Route::middleware(['auth','role:moderador'])->group(function(){
+	//Hacemos esto para que no haya conflicto con el resource de administrador ya que usan los mismos métodos
+		Route::resource('moderador/articulos','moderador\ArticleController', ['names' => [
+			'index' => 'moderador.articulos.index',
+			'create' => 'moderador.articulos.create',
+			'store' => 'moderador.articulos.store',
+			'show' => 'moderador.articulos.show',
+			'edit' => 'moderador.articulos.edit',
+			'update' => 'moderador.articulos.update',
+			'destroy' => 'moderador.articulos.destroy',
+	]]);
+	Route::get('moderador/imagenes/{imagen}','moderador\ArticleImageController@destroy')->name('moderador.imagen.delete');
+	Route::get('moderador/buscador/articulos','moderador\SearchArticleController@index');
 });

@@ -123,6 +123,9 @@
                                     @if(auth()->user()->hasRole('administrador'))
                                         <a class="dropdown-item" href="{{ url('/admin/temas') }}">Panel Admin</a>
                                     @endif
+                                    @if(auth()->user()->hasRole('moderador'))
+                                        <a class="dropdown-item" href="{{ url('moderador/articulos') }}">Panel Moderador</a>
+                                    @endif
                                     <a class="dropdown-item" href="{{ url('/home') }}">Perfil</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
