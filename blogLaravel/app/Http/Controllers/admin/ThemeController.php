@@ -106,8 +106,9 @@ class ThemeController extends Controller
     //Eliminamos tema seleccionado en la cola de trabajo ( BorrarTema.php )
     public function destroy(Theme $tema)
     {
-    	//$tema->delete();
+    	
     	BorrarTema::dispatch($tema);
+        $tema->delete();
     	$notificacion="El tema se ha eliminado correctamente";
     	return back()->with(compact('notificacion'));
     }

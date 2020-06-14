@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div style="margin-top: 150px; margin-bottom: 180px;" class="container">
+<div class="containerIndex">
 	<button type="button" class="btn btn-info"><a href="{{ route('tema.create') }}">Añadir Nuevo Tema</a></button>
 	@if(session('notificacion'))
 		<div class="alert alert-success" role="alert">

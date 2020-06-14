@@ -34,7 +34,7 @@
 	            </div>
 	        </div>
 			{{-- Paginador --}}
-			<div class="row">
+			<div class="paginador row">
 				<div class="col-xs-12 col-lg-10 col-lg-offset-1">
 					{{ $articulos->links() }}
 				</div>

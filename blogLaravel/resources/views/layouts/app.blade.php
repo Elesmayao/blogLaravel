@@ -45,6 +45,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/estilo.css') }}">
 
 </head>
 <body>
@@ -57,20 +58,20 @@
 
                     <div class="navbar-brand">
                         <a href="https://mobirise.com" class="navbar-logo"><img src="{{ asset('assets/images/img-laravel-128x128.png') }}" alt="Mobirise"></a>
-                        <a class="navbar-caption text-white" href="https://mobirise.com">{{ config('app.name') }}</a>
+                        <a class="navbar-caption text-white" href="#">{{ config('app.name') }}</a>
                     </div>
 
                 </div>
                 
                 {{-- BUSCADOR --}}
-                <div style="margin-top:17px">
+                <div class="buscador">
                     <form class="form-inline" action="{{ url('/buscador') }}" method="GET">
                         {{-- Le pasamos el token --}}
                         @csrf
                         <div class="form-group">
                             <input type="text" class="form-control" id="exampleInputEmail2" name="busqueda" placeholder="Buscar...">
                         </div>
-                        <button style="margin-top:7px" type="submit" class="btn btn-warning btn-sm">Buscar</button>
+                        <button  type="submit" class="boton btn btn-warning btn-sm">Buscar</button>
                     </form>
                 </div>
                 <div class="mbr-table-cell">
@@ -159,10 +160,10 @@
   .....
 
 
-<footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer2-5" data-rv-view="33" style="background-color: rgb(50, 50, 50); padding-top: 1.75rem; padding-bottom: 1.75rem;">
+<footer class="footer1 mbr-small-footer mbr-section mbr-section-nopadding" id="footer2-5" data-rv-view="33">
 
     <div class="container">
-        <p class="text-xs-center lead">Copyright (c) 2016 <a href="http://mobirise.com">Mobirise</a>.</p>
+        <p class="text-xs-center lead">Copyright (c) 2020 <a href="http://mobirise.com">LaVidaBlogger</a>.</p>
     </div>
 </footer>
   

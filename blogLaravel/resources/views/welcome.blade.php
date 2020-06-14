@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="mbr-wowslider-container mbr-section mbr-section__container carousel slide mbr-section-nopadding mbr-wowslider-container--twist mbr-after-navbar" data-ride="carousel" data-keyboard="false" data-wrap="true" data-interval="false" id="wowslider-1" data-rv-view="2" style="background-color: rgb(255, 255, 255);">
+<section class="seccion1 mbr-wowslider-container mbr-section mbr-section__container carousel slide mbr-section-nopadding mbr-wowslider-container--twist mbr-after-navbar" data-ride="carousel" data-keyboard="false" data-wrap="true" data-interval="false" id="wowslider-1" data-rv-view="2">
     <div class="mbr-wowslider">
         <div class="ws_images">
             <ul>
@@ -102,7 +102,7 @@
 
         
 
-<section class="mbr-section mbr-section-hero features16" id="features16-2" data-rv-view="27" style="background-color: rgb(249, 89, 58); padding-top: 80px; padding-bottom: 80px;">
+<section class="seccion2 mbr-section mbr-section-hero features16" id="features16-2" data-rv-view="27">
 
     
 
@@ -116,7 +116,7 @@
                         <div class="card cart-block">
 
                             <div class="col-xs-6 padding-left-0 padding-right-0">                                
-                                <div class="card-img iconbox"><a href="https://mobirise.com" class="cm-icon cm-icon-cloud mbr-iconfont mbr-iconfont-features16" style="color: rgb(252, 122, 96); text-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 20px, rgba(0, 0, 0, 0.0980392) -10px 10px 7px;"></a></div>
+                                <div class="contenidoinicio card-img iconbox"><a href="https://mobirise.com" class="cm-icon cm-icon-cloud mbr-iconfont mbr-iconfont-features16"></a></div>
                             </div>
                             <div class="col-xs-6 padding-left-0 padding-right-0">
                                 <div class="text-xs-left">
@@ -133,7 +133,7 @@
                         <div class="card cart-block">
                         
                             <div class="col-xs-6 padding-left-0 padding-right-0">                                
-                                <div class="card-img iconbox"><a href="https://mobirise.com" class="cm-icon cm-icon-note mbr-iconfont mbr-iconfont-features16" style="color: rgb(252, 122, 96); text-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 20px, rgba(0, 0, 0, 0.0980392) -10px 10px 7px;"></a></div>
+                                <div class="contenidoinicio card-img iconbox"><a href="https://mobirise.com" class="cm-icon cm-icon-note mbr-iconfont mbr-iconfont-features16"></a></div>
                             </div>
                             <div class="col-xs-6 padding-left-0 padding-right-0">
                                 <div class="text-xs-left">
@@ -157,7 +157,7 @@
                         <div class="card cart-block">
                         
                             <div class="col-xs-6 padding-left-0 padding-right-0">                                
-                                <div class="card-img iconbox"><a href="https://mobirise.com" class="cm-icon cm-icon-axe mbr-iconfont mbr-iconfont-features16" style="color: rgb(252, 122, 96); text-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 20px, rgba(0, 0, 0, 0.0980392) -10px 10px 7px;"></a></div>
+                                <div class="contenidoinicio card-img iconbox"><a href="https://mobirise.com" class="cm-icon cm-icon-axe mbr-iconfont mbr-iconfont-features16"></a></div>
                             </div>
                             <div class="col-xs-6 padding-left-0 padding-right-0">
                                 <div class="text-xs-left">
@@ -174,7 +174,7 @@
                         <div class="card cart-block">
                         
                             <div class="col-xs-6 padding-left-0 padding-right-0">                                
-                                <div class="card-img iconbox"><a href="https://mobirise.com" class="cm-icon cm-icon-rocket mbr-iconfont mbr-iconfont-features16" style="color: rgb(252, 122, 96); text-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 20px, rgba(0, 0, 0, 0.0980392) -10px 10px 7px;"></a></div>
+                                <div class="contenidoinicio card-img iconbox"><a href="https://mobirise.com" class="cm-icon cm-icon-rocket mbr-iconfont mbr-iconfont-features16"></a></div>
                             </div>
                             <div class="col-xs-6 padding-left-0 padding-right-0">
                                 <div class="text-xs-left">
@@ -194,14 +194,14 @@
 
 </section>
 
-<section class="mbr-section accordion" id="accordion1-3" data-rv-view="30" style="background-color: rgb(255, 255, 255); padding-top: 100px; padding-bottom: 100px;">
+<section class="cuarentenablog mbr-section accordion" id="accordion1-3" data-rv-view="30">
 
     
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-lg-8 col-lg-offset-2">
                     <div class="section-head text-center space30">
-                        <h1 class="mbr-section-title display-4">Accordion FAQ</h1>
+                        <h1 class="mbr-section-title display-4">CuarentenaBlog</h1>
                         
                     </div>
                     <div class="clearfix"></div>
@@ -210,30 +210,22 @@
                         <div class="panel panel-default" style="display: block;">
                             <div class="panel-heading" role="tab" id="headingOne">
                                 <span class="signSpan pseudoMinus"></span>
-                                <h4 class="panel-title display-6"><a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion1-3-init" data-core="" href="#collapseOneaccordion1-3" aria-expanded="false" aria-controls="collapseOne"><span class="sign"></span>What is Mobirise?</a></h4>
+                                <h4 class="panel-title display-6"><a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion1-3-init" data-core="" href="#collapseOneaccordion1-3" aria-expanded="false" aria-controls="collapseOne"><span class="sign"></span>¿Qué es CuarentenaBlog?</a></h4>
                             </div>
                             <div id="collapseOneaccordion1-3" class="panel-collapse noScroll collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                <div class="panel-body lead"><p>Mobirise is an offline app for Window and Mac to easily create small/medium websites, landing pages, online resumes and portfolios, promo sites for apps, events, services and products.</p></div>
+                                <div class="panel-body lead"><p>CuarentenaBlog es un fantástico blog donde los usuarios pueden compartir su contenido entre los diferentes temas que disponemos.
+                            </p></div>
                             </div>
                         </div>
                         <div class="panel panel-default" style="display: block;">
                             <div class="panel-heading" role="tab" id="headingTwo">
                                 <span class="signSpan pseudoPlus"></span>
-                                <h4 class="panel-title display-6"><a role="button" class="" data-toggle="collapse" data-parent="#accordion1-3-init" data-core="" href="#collapseTwoaccordion1-3" aria-expanded="true" aria-controls="collapseTwo">Is it good for me?</a></h4>
+                                <h4 class="panel-title display-6"><a role="button" class="" data-toggle="collapse" data-parent="#accordion1-3-init" data-core="" href="#collapseTwoaccordion1-3" aria-expanded="true" aria-controls="collapseTwo">¿Es bueno para mi?</a></h4>
                             </div>
                             <div id="collapseTwoaccordion1-3" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                <div class="panel-body lead"><p>Mobirise is perfect for non-techies who are not familiar with the intricacies of web development and for designers who prefer to work as visually as possible, without fighting with code. Also great for pro-coders for fast prototyping and small customers' projects.</p></div>
+                                <div class="panel-body lead"><p>Por supuesto! ¿ Quieres estar informado de todos los temas de la actualidad ? , que mejor blog que este, un blog sencillo y fácil de utilizar. ¿ Te lo vas a perder ?</p></div>
                             </div>
-                        </div>
-                        <div class="panel panel-default" style="display: block;">
-                            <div class="panel-heading" role="tab" id="headingThree">
-                                <span class="signSpan pseudoPlus"></span>
-                                <h4 class="panel-title display-6"><a role="button" class="" data-toggle="collapse" data-parent="#accordion1-3-init" data-core="" href="#collapseThreeaccordion1-3" aria-expanded="true" aria-controls="collapseThree">Why Mobirise?</a></h4>
-                            </div>
-                            <div id="collapseThreeaccordion1-3" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingThree">
-                                <div class="panel-body lead"><p>Key differences from traditional builders:<br>* Minimalistic, extremely <strong>easy-to-use</strong> interface<br>* <strong>Mobile</strong>-friendliness, latest website blocks and techniques "out-the-box"<br>* <strong>Free</strong> for commercial and non-profit use</p></div>
-                            </div>
-                        </div>                        
+                        </div>                      
                       </div>    
                     </div>
                 </div>

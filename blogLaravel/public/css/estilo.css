@@ -1,0 +1,48 @@
+.buscador{
+	margin-top:17px;
+}
+
+.boton{
+	margin-top:7px;
+}
+
+.seccion1{
+	background-color: rgb(255, 255, 255);
+	margin-top: 5.7rem;
+}
+
+.footer1{
+	background-color: rgb(50, 50, 50);
+	padding-top: 1.75rem;
+	padding-bottom: 1.75rem;
+}
+
+.contenidoinicio{
+	color: rgb(252, 122, 96);
+	text-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 20px, rgba(0, 0, 0, 0.0980392) -10px 10px 7px;
+}
+
+.cuarentenablog{
+	background-color: rgb(255, 255, 255);
+	padding-top: 100px; padding-bottom: 100px;
+}
+
+.seccion2{
+	background-color: rgb(249, 89, 58);
+	padding-top: 80px; padding-bottom: 80px;
+}
+
+.containerIndex{
+	margin-top: 150px;
+	margin-bottom: 180px;
+}
+
+.footerAdmin{
+	background-color: rgb(50, 50, 50);
+	padding-top: 1.75rem;
+	padding-bottom: 1.75rem;
+}
+
+.paginador{
+	margin-left: 40%;
+}

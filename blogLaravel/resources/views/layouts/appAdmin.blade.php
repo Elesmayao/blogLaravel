@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="{{ asset('assets/images/img-laravel-128x128.png') }}" type="image/x-icon">
     <meta name="description" content="">
     <title>@yield('title','Administración')</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/estilo.css') }}">
 
     <!-- Scripts -->
     
@@ -55,11 +56,11 @@
                     <div class="navbar-brand">
                         <a class="navbar-caption">@yield('rol','Zona Administrador') / {{ $miga }}</a>
                     </div>
+                    @if(auth()->check())
+                        <p style="color: white; font-weight: bold">Bienvenido {{ Auth::user()->name }}</p>
+                    @endif
             	</div>	
                 <div class="mbr-table-cell">
-					@if(auth()->check())
-						<p style="color: white; font-weight: bold">Bienvenido {{ Auth::user()->name }}</p>
-					@endif
 					<button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <span class="hamburger-icon"></span>
                     </button>
@@ -112,10 +113,10 @@
   @yield('content')
 
 
-	<footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer2-5" data-rv-view="33" style="background-color: rgb(50, 50, 50); padding-top: 1.75rem; padding-bottom: 1.75rem;">
+	<footer class="footerAdmin mbr-small-footer mbr-section mbr-section-nopadding" id="footer2-5" data-rv-view="33">
 
 	    <div class="container">
-	        <p class="text-xs-center lead">Copyright (c) 2016 <a href="http://mobirise.com">Mobirise</a>.</p>
+	        <p class="text-xs-center lead">Copyright (c) 2020 <a href="http://mobirise.com">LaVidaBlogger</a>.</p>
 	    </div>
 	</footer>
   
